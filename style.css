@@ -1,0 +1,32 @@
+/*
+    as unidades relativas pegam sempre uma medida relativa a tag de hierarquia superior, no caso BODY tem 50% da largura de HTML e PAI tem 50% da largura de BODY
+*/
+
+html{
+    background-color: #ccc;
+    font-size: 32px;
+}
+
+/*
+    No caso de medidas de tamanho de fonte possui 2 medidas relativas, EM e REM, por padrão 1EM possui 16px, porém ao setar um valor em um bloco o EM se torna o valor setado, com0o no exemplo 32 px
+    Utilizando EM o valor é setado de acordo com a tag superior hierarquica, por exemplo a tag html possui font-size de 32px, se a tag body tivesse font.size de 2em ela teria um tamanho de 64px, por diante a tag pai pegaria como padrão o em da tag body, sendo assim se tivesse 2em ela teria um tamanho de 128px.
+    REM pega como base o valor setado inicialmente, sendo assim a tag body pega 3rem da tg html que no caso representa 3x32=96px e a tag pai pega 2rem da tag html, sendo 2X32=64px.
+*/
+
+body{
+    background-color: blueviolet;
+    width: 50%;
+    font-size: 3rem; 
+}
+
+.pai{
+    background-color: #eaff02;
+    width: 50%;
+    font-size: 2rem;
+}
+
+.filha{
+    background-color: #258945;
+    width: 50%;
+    font-size: 1rem;
+}
